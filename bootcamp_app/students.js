@@ -7,7 +7,7 @@ const pool = new Pool({
   database: 'bootcampx'
 });
 
-pool.query(`
+pool.query(queryString, values);(`
 SELECT students.id as student_id, students.name as name, cohorts.name as cohort
 FROM students
 JOIN cohorts ON cohorts.id = cohort_id
